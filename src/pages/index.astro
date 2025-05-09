@@ -1,0 +1,34 @@
+---
+import Hero from "@/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import About from "@/components/About.astro";
+import RecentPost from "@/components/RecentPost.astro";
+import RecentWork from "@/components/RecentWork.astro";
+import Timeline from "@/components/Timeline.astro";
+---
+
+<Layout title="Homepage">
+  <Hero />
+  <!-- AbOUT -->
+  <About />
+  <!-- Recent Post -->
+  <RecentPost max={3}>
+    <h1
+      class="card-hand whitespace-nowrap text-sm lg:text-base py-2 px-6 lg:px-12 bg-blue-500 text-white font-bold"
+    >
+      Recent Post
+    </h1>
+    <a
+      href="/posts"
+      class="card-hand whitespace-nowrap text-sm ml-auto px-6 lg:px-12 lg:text-base py-2 bg-white font-bold"
+    >
+      View All
+    </a>
+  </RecentPost>
+  <div class="mt-14">
+    <RecentWork />
+  </div>
+  <div class="mt-14">
+    <Timeline />
+  </div>
+</Layout>

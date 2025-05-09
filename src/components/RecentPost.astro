@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+
+const { all = false, max = posts.length } = Astro.props;
+
+let postData = posts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+if (!all) {
+  postData = postData.slice(0, max);
+}
+---
+
+<div>
+  <div class="container space-y-4 mt-12 mx-auto px-3 lg:px-24">
+    <div class="flex items-center">
+      <slot />
+    </div>
+    <div class="space-y-3 flex flex-col">
+      {
+        postData.map((post, index) => {
+          return (
+            <a href={`blog/${post.id}`} class=" decoration-1">
+              <div class="bg-white card-hand p-5">
+                <h1 class="font-bold text-2xl">{post.data.title}</h1>
+                <div>
+                  <span>
+                    {new Date(post.data.pubDate).toLocaleDateString("id-ID", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+                <p>{post.data.description}</p>
+              </div>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>

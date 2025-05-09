@@ -1,0 +1,27 @@
+---
+const { date, first, end } = Astro.props;
+---
+
+<div class="flex items-center relative">
+  {
+    first ? (
+      <div class="w-1 relative top-12 h-[100px] bg-black" />
+    ) : !end ? (
+      <div class="w-1 h-[100px] bg-black" />
+    ) : (
+      <div class="w-1 relative bottom-12 h-[100px] bg-black" />
+    )
+  }
+  <div class="w-6 h-1 bg-black"></div>
+  <div class="w-5 aspect-square bg-orange-500 h-5 card-hand"></div>
+  <div
+    class="ml-4 flex lg:items-center flex-col lg:flex-row space-x-3 bg-white card-hand p-3 w-full max-w-full"
+  >
+    <div class="font-extrabold text-lg">
+      {date}
+    </div>
+    <p>
+      <slot />
+    </p>
+  </div>
+</div>

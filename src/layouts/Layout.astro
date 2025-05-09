@@ -1,0 +1,65 @@
+---
+import type { CollectionEntry } from "astro:content";
+import "@/styles/global.css";
+import ToggleMenu from "@/components/ToggleMenu.astro";
+import LogoBrand from "@/components/LogoBrand.astro";
+import NavLink from "@/components/NavLink.astro";
+
+type Props = {
+  title?: string;
+};
+
+const { title } = Astro.props;
+
+//ok
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Mali", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-full px-4 lg:px-0 h-14 z-50 mt-4 fixed top-0">
+      <nav
+        class="bg-white card-hand z-50 flex items-center max-w-2xl mx-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-3"
+      >
+        <LogoBrand />
+        <div class="ml-auto">
+          <ToggleMenu />
+        </div>
+        <ul class="hidden lg:flex gap-6">
+          <NavLink link="/">Home</NavLink>
+          <NavLink link="/posts">Posts</NavLink>
+          <NavLink link="/works">Works</NavLink>
+          <NavLink link="/contact">Contact</NavLink>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <script>
+      import AOS from "aos";
+      AOS.init();
+    </script>
+  </body>
+</html>

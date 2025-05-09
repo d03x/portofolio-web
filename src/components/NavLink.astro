@@ -1,0 +1,12 @@
+---
+const { link } = Astro.props;
+---
+
+<li>
+  <a
+    href={link}
+    class="font-bold transition-colors relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+  >
+    <slot />
+  </a>
+</li>

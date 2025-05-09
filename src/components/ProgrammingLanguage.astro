@@ -1,0 +1,7 @@
+---
+const { lang } = Astro.props;
+---
+
+<a class={`card-hand text-xs lg:text-base px-3 font-bold py-1 lang-${lang}`}>
+  <slot />
+</a>

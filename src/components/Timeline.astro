@@ -1,0 +1,32 @@
+---
+import TimelineCard from "@/components/TimelineCard.astro";
+---
+
+<div>
+  <div class="container space-y-4 mx-auto px-3 lg:px-24">
+    <div class="flex items-center">
+      <h1
+        class="card-hand whitespace-nowrap text-sm lg:text-base py-2 px-6 lg:px-12 bg-blue-500 text-white font-bold"
+      >
+        TIMELINE
+      </h1>
+    </div>
+    <div class="flex flex-col">
+      <TimelineCard first={true} date="Oktober 1992">
+        Saya DIlahirkan
+      </TimelineCard>
+      <TimelineCard first={false} date="Oktober 2003">
+        Saya sudah dilahirkan dibumi ini
+      </TimelineCard>
+      <TimelineCard first={false} date="Oktober 2024">
+        Kuliah di STMIK MARDIRA INDONESIA
+      </TimelineCard>
+      <TimelineCard first={false} date="Oktober 2023">
+        Sekolah di SMK INFORMATIKA SUMEDANG
+      </TimelineCard>
+      <TimelineCard end={true} date="Oktober 2024">
+        IT Support NUSA AGENCY
+      </TimelineCard>
+    </div>
+  </div>
+</div>

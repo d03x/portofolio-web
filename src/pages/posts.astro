@@ -1,0 +1,22 @@
+---
+import RecentPost from "@/components/RecentPost.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Posts">
+  <div class="mt-32 mb-20">
+    <RecentPost all={true}>
+      <h1
+        class="card-hand whitespace-nowrap text-sm lg:text-base py-2 px-6 lg:px-12 bg-blue-500 text-white font-bold"
+      >
+        Recent Post
+      </h1>
+      <a
+        href="/"
+        class="card-hand whitespace-nowrap text-sm ml-auto px-6 lg:px-12 lg:text-base py-2 bg-white font-bold"
+      >
+        Back
+      </a>
+    </RecentPost>
+  </div>
+</Layout>

@@ -1,0 +1,58 @@
+---
+import ProgrammingLanguage from "./ProgrammingLanguage.astro";
+---
+
+<div>
+  <div class="container space-y-4 mx-auto px-3 lg:px-24">
+    <div class="flex items-center">
+      <h1
+        class="card-hand whitespace-nowrap text-sm lg:text-base py-2 px-6 lg:px-12 bg-blue-500 text-white font-bold"
+      >
+        Recent Work
+      </h1>
+      <a
+        href=""
+        class="card-hand whitespace-nowrap text-sm ml-auto px-6 lg:px-12 lg:text-base py-2 bg-white font-bold"
+      >
+        View All
+      </a>
+    </div>
+    <div class="space-y-3 flex flex-col">
+      {
+        [1, 2].map(() => {
+          return (
+            <div
+              data-aos="fade-zoom-in"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration={600}
+              class=" decoration-1"
+            >
+              <div class="bg-white card-hand p-5">
+                <h1 class="font-bold text-2xl">Post APP SAUNG TEKO.COM</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  suscipit numquam vero, deleniti repellendus, officiis voluptas
+                  in, omnis eum doloribus quaerat distinctio! At, vel magnam ab
+                  officia natus est ipsam? Ullam ape
+                </p>
+                <div class="mt-4 flex flex-row flex-wrap items-start gap-3">
+                  <ProgrammingLanguage lang="javascript">
+                    Javascript
+                  </ProgrammingLanguage>
+                  <ProgrammingLanguage lang="laravel">
+                    Laravel
+                  </ProgrammingLanguage>
+                  <ProgrammingLanguage lang="tailwind">
+                    Tailwind CSS
+                  </ProgrammingLanguage>
+                  <ProgrammingLanguage lang="mysql">Mysql</ProgrammingLanguage>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>
