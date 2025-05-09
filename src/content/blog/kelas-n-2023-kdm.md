@@ -9,7 +9,7 @@ heroImage: '/blog-placeholder-3.jpg'
 
 Selamat datang di portofolio mahasiswa kelas N2023! Di sini, Anda dapat menemukan karya-karya terbaik yang telah dihasilkan oleh para mahasiswa. Klik pada tautan di bawah untuk melihat detail portofolio masing-masing mahasiswa:
 
-- [Mahasiswa 1](#)
+- [Ahmad Rafi](https://www.ahmadrafi.my.id/)
 - [Mahasiswa 2](#)
 - [Mahasiswa 3](#)
 
