@@ -7,8 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap(), preact(), (await import("@playform/compress")).default()],
+  site: 'https://d03xdev.xyz',
+  integrations: [mdx(), sitemap({
+    customPages: [
+      'https://d03xdev.xyz/works',
+      'https://d03xdev.xyz/posts',
+      'https://d03xdev.xyz/contats'
+    ],
+  }), preact(), (await import("@playform/compress")).default()],
   experimental: {
     responsiveImages: true
   },
