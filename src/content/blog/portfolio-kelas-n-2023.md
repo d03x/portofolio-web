@@ -1,6 +1,6 @@
 ---
 title: 'Kelas N2023'
-description: 'Portofolio mahasiswa kelas n2023'
+description: 'Portofolio digital Dadan, mahasiswa kelas N2023 yang fokus di bidang web development dan teknologi informasi. Menampilkan proyek-proyek front-end, back-end, serta aplikasi web modern dengan teknologi terkini.'
 pubDate: 'Jul 08 2024'
 heroImage: '/blog-placeholder-3.jpg'
 ---
