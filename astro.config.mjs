@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), preact()],
+  integrations: [mdx(), sitemap(), preact(), (await import("@playform/compress")).default()],
   experimental: {
     responsiveImages: true
   },

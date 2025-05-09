@@ -8,7 +8,14 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout
+  title={title}
+  canonicalUrl={"https://d03xdev.xyz/blog/"}
+  description={description}
+  pubDate={pubDate}
+  image={heroImage}
+  author={"Dadan"}
+>
   <div class="container mt-32 max-w-3xl bg-white mx-auto card-hand">
     <div class="p-4">
       <article class="flex flex-col gap-4">
