@@ -2,7 +2,7 @@
 title: 'Cara Membuat Portofolio Web Developer yang Menarik di 2025'
 description: 'Panduan praktis membuat portofolio sebagai web developer agar lebih mudah dilirik recruiter dan klien'
 pubDate: 'May 09 2025'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/cara-buat-porfolio.jpg'
 ---
 
 Memiliki portofolio yang menarik adalah kunci utama bagi seorang web developer untuk menunjukkan kemampuan dan menarik perhatian recruiter atau klien. Di tahun 2025, kompetisi semakin ketat, sehingga kamu perlu menyusun portofolio yang tidak hanya bagus secara teknis, tapi juga menarik secara visual dan SEO-friendly.
